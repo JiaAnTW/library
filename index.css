@@ -1,0 +1,14 @@
+.container{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
