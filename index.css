@@ -6,9 +6,25 @@
     justify-content: center;
 }
 
+body{
+    background-color: #17a2b8;
+}
 
 .btn-area{
     width: 100%;
     display: flex;
     justify-content: space-around;
+}
+
+.card-text{
+    max-height: 50vh ;
+    width: 35vw;
+    text-align: justify;
+    overflow-x: auto;
+    overflow-y: auto;
+
+}
+
+.card-title ,.card-text ,button{
+    font-family: 'Noto Sans TC';
 }
