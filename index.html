@@ -5,10 +5,18 @@
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
+        <div class="contain">
             <div class="card" style="width: 40vw;">
                 <div class="card-body" id="second">
                 <h5 class="card-title" id="title">找出假新聞</h5>
+                <div id="link-bar" style="display:none;">
+                    <div id="link-circle" ><button id="link-btn" onclick="linkTo()">點我開啟<br/>好讀原文</button></div>
+                    <div id="source-bar"></div>
+                </div>
+                <div id="ans-bar" style="display:none;">
+                    <div id="ans-circle" ><div id="ans-btn">點我開啟<br/>好讀原文</div></div>
+                    <div id="msg-bar"></div>
+                </div>
                 <p class="card-text" id="question">判斷以下內容是否為真!</p>
                 <form id="contact" style="display:none;">
                     恭喜獲得抽獎機會!<br/> 請填寫您的資訊<br/><br/>
@@ -28,10 +36,12 @@
                     <button type="button" class="btn btn-primary"  onclick="send()">送出</button>
                 </form>
                 <div class="btn-area">
-                        <button type="button" style="display:none;" class="btn btn-success"  onclick="changeNowAt(1)">真</button>
-                        <button type="button" style="display:none;" class="btn btn-danger" onclick="changeNowAt(0)">假</button>
+                        <button type="button" style="display:none;" class="btn btn-success"  onclick="check(1)">真</button>
+                        <div id="counter" style="display:none;"></div>
+                        <button type="button" style="display:none;" class="btn btn-danger" onclick="check(0)">假</button>
                         <button type="button" class="btn btn-info" onclick="start()">開始遊戲</button>
-                        <button type="button" style="display:none;" class="btn btn-dark" onclick="replay()">再玩一次</button>
+                        <button type="button" class="btn btn-dark" id="next" style="display:none;" onclick="changeNowAt()">下一題</button>
+                        <button type="button" style="display:none;" class="btn btn-dark" id="again" onclick="replay()">再玩一次</button>
                 </div>
             </div>
             </div>
