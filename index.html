@@ -18,29 +18,29 @@
                     <div id="msg-bar"></div>
                 </div>
                 <p class="card-text" id="question">知道如何辨識醫學新聞的真偽嗎? 只要成功答對三題即可參加抽獎，每位讀者最多可參加三次抽獎(題目隨機發送)</p>
-                <form id="contact" style="display:none;">
+                <form id="contact" form action="https://formspree.io/nckumedlibact@gmail.com" method="POST" style="display:none;">
                     恭喜獲得抽獎機會!<br/> 請填寫您的資訊<br/><br/>
                     <div class="form-group">
                         <label for="exampleInputEmail1">您的信箱</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" name="信箱" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">您的姓名</label>
-                        <input type="text" class="form-control" id="name" placeholder="姓名">
+                        <input type="text" name="姓名" class="form-control" id="name" placeholder="姓名">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">系所/單位</label>
-                        <input type="text" class="form-control" id="department" placeholder="系所/單位">
+                        <input type="text" name="單位" class="form-control" id="department" placeholder="系所/單位">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">學號/員工號</label>
-                        <input type="text" class="form-control" id="identity" placeholder="學號/員工號">
+                        <input type="text" name="學號" class="form-control" id="identity" placeholder="學號/員工號">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">聯絡電話</label>
-                        <input type="number" class="form-control" id="phone" placeholder="聯絡電話">
+                        <input type="number" name="電話"  class="form-control" id="phone" placeholder="聯絡電話">
                     </div>
-                    <button type="button" class="btn btn-primary"  onclick="send()">送出</button>
+                    <button type="submit" value="Send" class="btn btn-primary"  onclick="send()">送出</button>
                 </form>
                 <div class="btn-area">
                         <button type="button" style="display:none;" class="btn btn-success"  onclick="check(1)">真</button>
