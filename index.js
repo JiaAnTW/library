@@ -155,11 +155,11 @@ const check=(input)=>{
 }
 
 const send=()=>{
-    /*var email = $('#email'),
-    name = $('#name'),
-    identity = $('#identity'),
-    department = $('#department'),
-    phone = $('#phone');
+    var email = $('#email');
+    var name = $('#name')
+    var identity = $('#identity')
+    var department = $('#department')
+    var phone = $('#phone');
     var parameter = {};
     parameter = {
       email: email.val(),
@@ -168,7 +168,9 @@ const send=()=>{
       department: department.val(),
       phone : phone.val()
     };
-    $.post("https://script.google.com/macros/s/AKfycbxNPD8xVmraw0OLc0Pi_qPBeiWKppRUxTbUjyj8hEjKn-b3O3g/exec", parameter);*/
+    $.get('https://script.google.com/macros/s/AKfycbxNPD8xVmraw0OLc0Pi_qPBeiWKppRUxTbUjyj8hEjKn-b3O3g/exec', parameter, function(data) {
+  console.log(data);
+    });
     nowAt++;
     document.getElementById("title").innerHTML="";
     document.getElementById("question").innerHTML="感謝您的填寫!";
