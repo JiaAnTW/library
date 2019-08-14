@@ -8,7 +8,7 @@
         <div class="contain">
             <div class="card" style="width: 40vw;">
                 <div class="card-body" id="second">
-                <h5 class="card-title" id="title">找出假新聞</h5>
+                <h5 class="card-title" id="title">找出假新聞- 「真假新聞線上猜」</h5>
                 <div id="link-bar" style="display:none;">
                     <div id="link-circle" ><button id="link-btn" onclick="linkTo()">點我開啟<br/>好讀原文</button></div>
                     <div id="source-bar"></div>
@@ -17,21 +17,28 @@
                     <div id="ans-circle" ><div id="ans-btn">點我開啟<br/>好讀原文</div></div>
                     <div id="msg-bar"></div>
                 </div>
-                <p class="card-text" id="question">判斷以下內容是否為真!</p>
+                <p class="card-text" id="question">知道如何辨識醫學新聞的真偽嗎? 只要成功答對三題即可參加抽獎，每位讀者最多可參加三次抽獎(題目隨機發送)</p>
                 <form id="contact" style="display:none;">
                     恭喜獲得抽獎機會!<br/> 請填寫您的資訊<br/><br/>
                     <div class="form-group">
                         <label for="exampleInputEmail1">您的信箱</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">您的姓名</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="姓名">
+                        <input type="text" class="form-control" id="name" placeholder="姓名">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">您的電話</label>
-                        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="電話">
+                        <label for="exampleInputPassword1">系所/單位</label>
+                        <input type="text" class="form-control" id="department" placeholder="系所/單位">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">學號/員工號</label>
+                        <input type="text" class="form-control" id="identity" placeholder="學號/員工號">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">聯絡電話</label>
+                        <input type="number" class="form-control" id="phone" placeholder="聯絡電話">
                     </div>
                     <button type="button" class="btn btn-primary"  onclick="send()">送出</button>
                 </form>
@@ -39,7 +46,7 @@
                         <button type="button" style="display:none;" class="btn btn-success"  onclick="check(1)">真</button>
                         <div id="counter" style="display:none;"></div>
                         <button type="button" style="display:none;" class="btn btn-danger" onclick="check(0)">假</button>
-                        <button type="button" class="btn btn-info" onclick="start()">開始遊戲</button>
+                        <button type="button" class="btn btn-info" onclick="start()">開始</button>
                         <button type="button" class="btn btn-dark" id="next" style="display:none;" onclick="changeNowAt()">下一題</button>
                         <button type="button" style="display:none;" class="btn btn-dark" id="again" onclick="replay()">再玩一次</button>
                 </div>
@@ -47,7 +54,7 @@
             </div>
         </div>
         <!-- boostrap -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>

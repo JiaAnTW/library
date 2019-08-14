@@ -1,15 +1,15 @@
 var nowAt=0;
 const title=[
-    '1. 【喝咖啡到底好不好？】最新研究：一天3到4杯咖啡利大於弊',
-    '2. 強大的繁育能力，女子一胎竟然生下11個寶寶，生產過程艱難',
-    '3. 新研究顛覆印象，魚油不會提高兒童閱讀技能或記憶力',
-    '4. LINE訊息：陽明醫院公衛所張武修教授傳給大家的消息：7-11統一超商宣布重大事件。旗下飲品全都用越南茶葉。含劇毒戴奧辛。',
-    '5. 找到牛奶致癌的確實證據',
-    '6. 搭雲霄飛車可預防腎結石？嚇得我「石頭都噴出來」拉～',
-    '7. 臉書訊息：中研院有身體健康檢查、500塊錢的車馬費',
-    '8. 神秘怪病捲土重來！印度東北部上百名幼童急性腦炎猝死 研究人員建議：別空腹大啖荔枝！',
-    '9. RICE倡導者推翻自己的理論：冰敷對運動傷害無益！',
-    '10. 你的體質，不可能是酸的！戳破鹼性水、蚊子愛叮酸性人的五大迷思'
+    '【喝咖啡到底好不好？】最新研究：一天3到4杯咖啡利大於弊',
+    '強大的繁育能力，女子一胎竟然生下11個寶寶，生產過程艱難',
+    '新研究顛覆印象，魚油不會提高兒童閱讀技能或記憶力',
+    'LINE訊息：陽明醫院公衛所張武修教授傳給大家的消息：7-11統一超商宣布重大事件。旗下飲品全都用越南茶葉。含劇毒戴奧辛。',
+    '找到牛奶致癌的確實證據',
+    '搭雲霄飛車可預防腎結石？嚇得我「石頭都噴出來」拉～',
+    '臉書訊息：中研院有身體健康檢查、500塊錢的車馬費',
+    '神秘怪病捲土重來！印度東北部上百名幼童急性腦炎猝死 研究人員建議：別空腹大啖荔枝！',
+    'RICE倡導者推翻自己的理論：冰敷對運動傷害無益！',
+    '你的體質，不可能是酸的！戳破鹼性水、蚊子愛叮酸性人的五大迷思'
 ]
 
 const source=[
@@ -64,13 +64,20 @@ const question=[
 ];
 
 const ans=[1,0,1,0,0,1,0,1,1,1]
+var order=[0,1,2,3,4,5,6,7,8,9]
+function shuffle(a,b) {
+    var num = Math.random() > 0.5 ? -1:1;
+    return num;
+  }
+order = order.sort(shuffle);
 var score=0;
 
 const start=()=>{
-    document.getElementById("title").innerHTML=title[nowAt];
-    document.getElementById("question").innerHTML=question[nowAt];
-    document.getElementById("counter").innerHTML=0;
-    document.getElementById("source-bar").innerHTML=source[nowAt];
+    score=0;
+    document.getElementById("title").innerHTML=title[order[nowAt]];
+    document.getElementById("question").innerHTML=question[order[nowAt]];
+    document.getElementById("counter").innerHTML="答對 "+score+" 題";
+    document.getElementById("source-bar").innerHTML=source[order[nowAt]];
     $(".btn-info").hide();
     $(".btn-success").show();
     $("#counter").show();
@@ -87,12 +94,13 @@ const changeNowAt=()=>{
     $(".btn-danger").show();
     $("#link-bar").show();
     nowAt++;
-    document.getElementById("title").innerHTML=title[nowAt];
-    document.getElementById("question").innerHTML=question[nowAt];
-    document.getElementById("source-bar").innerHTML=source[nowAt];
-    if(nowAt>=10){
+    document.getElementById("title").innerHTML=title[order[nowAt]];
+    document.getElementById("question").innerHTML=question[order[nowAt]];
+    document.getElementById("source-bar").innerHTML=source[order[nowAt]];
+    if(nowAt>=10 || score>=3){
         //document.getElementById("second").style.display="none";
         //document.getElementById("third").style.display="block";
+        nowAt=10;
         document.getElementById("title").innerHTML="你答對的題數為";
         document.getElementById("question").innerHTML=score;
         $("#counter").hide();
@@ -100,7 +108,7 @@ const changeNowAt=()=>{
         $(".btn-danger").hide();
         $("#again").show();
         $("#link-bar").hide();
-        if(score>=9){
+        if(score>=3){
             $("#contact").show();
             $(".btn-area").hide();
         }
@@ -112,13 +120,13 @@ const check=(input)=>{
     $("#link-bar").hide();
     $("#ans-bar").show();
     $("#next").show();
-    if(input==ans[nowAt]){
+    if(input==ans[order[nowAt]]){
         score++;
         document.getElementById("ans-btn").innerHTML='✓';
         document.getElementById("ans-circle").style.border="3px solid #28a745";
         document.getElementById("ans-btn").style.backgroundColor="#28a745";
         document.getElementById("msg-bar").style.color="#28a745";
-        if(ans[nowAt]==0){
+        if(ans[order[nowAt]]==0){
             document.getElementById("msg-bar").innerHTML='恭喜您答對了! 沒有錯這是一則假新聞!';
         }
         else{
@@ -131,22 +139,36 @@ const check=(input)=>{
         document.getElementById("ans-circle").style.border="3px solid #dc3545";
         document.getElementById("ans-btn").style.backgroundColor="#dc3545";
         document.getElementById("msg-bar").style.color="#dc3545";
-        if(ans[nowAt]==0){
+        if(ans[order[nowAt]]==0){
             document.getElementById("msg-bar").innerHTML='真可惜答錯了! 這是一則假新聞!';
         }
         else{
             document.getElementById("msg-bar").innerHTML='真可惜答錯了! 這是一則真新聞!';
         }
     }
-    document.getElementById("counter").innerHTML=score;
+    document.getElementById("counter").innerHTML="答對 "+score+" 題";
     document.getElementById("title").innerHTML='';
-    document.getElementById("question").innerHTML=detail[nowAt];
+    document.getElementById("question").innerHTML=detail[order[nowAt]];
     $(".btn-success").hide();
     $(".btn-danger").hide();
     $("#counter").hide();
 }
 
 const send=()=>{
+    var email = $('#email'),
+    name = $('#name'),
+    identity = $('#identity'),
+    department = $('#department'),
+    phone = $('#phone');
+    var parameter = {};
+    parameter = {
+      email: email.val(),
+      name: name.val(),
+      identity: identity.val(),
+      department: department.val(),
+      phone : phone.val()
+    };
+    $.get("https://script.google.com/macros/s/AKfycbxNPD8xVmraw0OLc0Pi_qPBeiWKppRUxTbUjyj8hEjKn-b3O3g/exec", parameter);
     nowAt++;
     document.getElementById("title").innerHTML="";
     document.getElementById("question").innerHTML="感謝您的填寫!";
@@ -160,10 +182,10 @@ const replay=()=>{
     $("#contact").hide();
     nowAt=0;
     score=0;
-    document.getElementById("title").innerHTML="判斷假新聞";
-    document.getElementById("question").innerHTML="判斷以下內容是否為真!";
+    document.getElementById("title").innerHTML="找出假新聞- 「真假新聞線上猜」";
+    document.getElementById("question").innerHTML="知道如何辨識醫學新聞的真偽嗎? 只要成功答對三題即可參加抽獎，每位讀者最多可參加三次抽獎(題目隨機發送)";
 }
 
 const linkTo=()=>{
-    window.open(link[nowAt], '_blank');
+    window.open(link[order[nowAt]], '_blank');
 }
