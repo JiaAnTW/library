@@ -21,20 +21,20 @@ const source=[
     '<ETtoday新聞雲>鍵盤大檸檬 2016/09/28',
     '無',
     '風傳媒 2019/6/20',
-    '每日頭條 2018/1/17',
+    '運動星球 2018/1/8',
     '天下雜誌 2019/3/18'
 ];
 
 const detail=[
-    '此則新聞以中性角度報導飲用咖啡的各種利弊，不致產生誤導，其中仔細說明南安普頓大學所執行的原始研究確實刊登於英國醫學期刊(BMJ)，新聞報導內容與原始研究相符，英國醫學期刊為經同儕審查(peer review)的期刊且被Journal Citation Report (JCR)收錄，2018年期刊影響係數(Journal Impact Factor)為27.604，醫學領域期刊中位居第5名，每年7,000至8,000件投稿文章中只刊登7%的文章。',
-    '此則新聞內容明顯異於常理，當中照片為順應上下文拼湊的照片，當中的第二張照片中的婦女正準備接受腹部巨大腫瘤切除手術，腹中並非嬰兒，第三張照片中的11名嬰兒其實為印度試管嬰兒中心的11對夫婦希望在2011年11月11日分娩所拍下的紀念照片',
+    '此則新聞以中性角度報導飲用咖啡的各種利弊，不致產生誤導，其中仔細說明南安普頓大學所執行的<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5696634/?myncbishare=nckulib&otool=itwxtailib" target="_blank">原始研究</a>確實刊登於英國醫學期刊(BMJ)，新聞報導內容與原始研究相符，英國醫學期刊為經同儕審查(peer review)的期刊且被Journal Citation Report (JCR)收錄，2018年期刊影響係數(Journal Impact Factor)為27.604，醫學領域期刊中位居第5名，每年7,000至8,000件投稿文章中只刊登7%的文章。',
+    '此則新聞內容明顯異於常理，當中照片為順應上下文拼湊的照片，當中的第二張照片中的婦女正準備接受腹部巨大腫瘤切除手術，腹中並非嬰兒，第三張照片中的11名嬰兒其實為印度試管嬰兒中心的11對夫婦希望在2011年11月11日分娩所拍下的紀念照片<a href="https://www.mygopen.com/2019/06/Birth-11-Baby.html" target="_blank">(MyGoPen澄清謠言網站)</a>',
     '此則新聞提供的原文連結為世界排名前百大的英國伯明罕大學首頁新聞，當中所提供的研究連結與新聞內容相符，PLoS One期刊為經同儕審查(peer review)的期刊且被Journal Citation Report (JCR)收錄，2018年期刊影響係數(Journal Impact Factor)為2.776，在跨領域科學期刊中排名第24名，該期刊官方網站中對於文章審核與刊登的資訊透明化程度高，此篇文章類型為證據等級第二級的RCT研究(CEBM)',
     '此則LINE訊息經證實為謠言，根據統一企業聲明，謠言所描述內容完全虛構，不僅沒有茶廠因茶品含有戴奧辛而遭到查封，且目前統一並未在龍潭設廠。另外學術界確實有位張武修教授，但張教授專精於輻射生物學領域，不僅從未發表上述謠言內容，且已不在陽明大學任教多年',
-    '此篇部落格文章內容在其他個人網站上所刊登的內容如出一轍，根據專門破解網路謠言的蘭姆酒吐司網站的說明，柯林坎貝爾的確以老鼠為實驗對象做過酪蛋白與癌症相關性研究，但坎貝爾博士回應酪蛋白和癌症雖有相關，但並不能以動物實驗結果直接斷定食用牛奶與人類罹癌之間有因果關係；瑞典卡洛林斯卡的研究經BBC的報導也說明該研究團隊並無法對研究結果做出解釋，無法因此斷言牛奶會致癌；牛奶的IGF-1含量為0.6ng/ml，遠低於母乳的IGF-1含量2.2 ng/ml，所以因為牛奶含IGF-1會致癌的謠言便不攻自破',
-    '此則新聞以預防角度為標題，不致產生誤導，內容提及的研究確實刊登於美國骨科學會期刊，報導內容與原始研究相符，美國骨科學會期刊(The Journal of the American Osteopathic Association)為經同儕審查(peer review)的期刊，期刊官方網站中對於文章審核與刊登的資訊透明化，而本篇研究獲選2018年搞笑諾貝爾醫學獎，該獎項表彰之成就令人發笑後發人省思，且為有用的研究及知識',
-    '中央研究院所建置的「臺灣人體生物資料庫」的確會蒐集臺灣民眾的生物資料，但參與該研究採預約制且參與者不會獲得任何報酬，但可提供交通接駁，若自行前往才會補助交通費用禮券500元；該研究所蒐集的資料無法取代醫院所做的正式檢查，更不會主動提供，官方說明請參考「臺灣人體生物資料庫」於108年4月19日所做的聲明',
-    '此則新聞提到2017年印度國家疾病控制中心與美國疾病管制暨預防中心（CDC）合作的研究，確實刊登於Lancet Global Health的一項個案對照研究(Case-control study)，後繼也有8篇文章針對此研究做了評論與回應，可以參考PubMed: Comment in連結。另外圖書館訂購的UpToDate資料庫亦有引用此篇研究，簡短地提到空腹食用荔枝與低血糖及腦炎的爆發是有相關的，在2/3的受害者尿液樣本都驗出荔枝毒素hypoglycin A和methylenecyclopropylglycine (MCPG)的代謝物',
-    'MirKin博士的個人網站的確發表過Why Ice Delays Recovery這篇文章，也在該篇文章中提出相關的研究，以及對運動傷害的新處理建議',
+    '此篇部落格文章內容在其他個人網站上所刊登的內容如出一轍，根據專門破解網路謠言的<a href="https://www.rumtoast.com/7707/萬年老梗！謠言傳到爛的-牛奶致癌-是真的嗎？" target="_blank">蘭姆酒吐司網站的說明</a>，柯林坎貝爾的確以老鼠為實驗對象做過酪蛋白與癌症相關性研究，但坎貝爾博士回應酪蛋白和癌症雖有相關，但並不能以動物實驗結果直接斷定食用牛奶與人類罹癌之間有因果關係；瑞典卡洛林斯卡的研究經BBC的報導也說明該研究團隊並無法對研究結果做出解釋，無法因此斷言牛奶會致癌；牛奶的IGF-1含量為0.6ng/ml，遠低於母乳的IGF-1含量2.2 ng/ml，所以因為牛奶含IGF-1會致癌的謠言便不攻自破<a href="https://www.rumtoast.com/7707/萬年老梗！謠言傳到爛的-牛奶致癌-是真的嗎？" target="_blank">(蘭姆酒吐司，2018年4月19日)。</a>',
+    '此則新聞以預防角度為標題，不致產生誤導，內容提及的<a href="https://jaoa.org/article.aspx?articleid=2557373" target="_blank">研究</a>確實刊登於美國骨科學會期刊，報導內容與原始研究相符，美國骨科學會期刊(The Journal of the American Osteopathic Association)為經同儕審查(peer review)的期刊，期刊官方網站中對於文章審核與刊登的資訊透明化，而本篇研究獲選2018年搞笑諾貝爾醫學獎，該獎項表彰之成就令人發笑後發人省思，且為有用的研究及知識',
+    '中央研究院所建置的「臺灣人體生物資料庫」的確會蒐集臺灣民眾的生物資料，但參與該研究採預約制且參與者不會獲得任何報酬，但可提供交通接駁，若自行前往才會補助交通費用禮券500元；該研究所蒐集的資料無法取代醫院所做的正式檢查，更不會主動提供，官方說明請參考「臺灣人體生物資料庫」於108年4月19日所做的<a href="https://www.twbiobank.org.tw/new_web/news.php" target="_blank">聲明</a>',
+    '此則新聞提到2017年印度國家疾病控制中心與美國疾病管制暨預防中心（CDC）合作的<a href="https://www.thelancet.com/pdfs/journals/langlo/PIIS2214-109X(17)30035-9.pdf" target="_blank">研究</a>，確實刊登於Lancet Global Health的一項個案對照研究(Case-control study)，後繼也有8篇文章針對此研究做了評論與回應，可以參考<a href="https://www.ncbi.nlm.nih.gov/pubmed/28153514" target="_blank">PubMed: Comment in連結</a>。另外圖書館訂購的<a href="https://reurl.cc/OxMdR" target="_blank">UpToDate資料庫</a>亦有引用此篇研究，簡短地提到空腹食用荔枝與低血糖及腦炎的爆發是有相關的，在2/3的受害者尿液樣本都驗出荔枝毒素hypoglycin A和methylenecyclopropylglycine (MCPG)的代謝物',
+    'MirKin博士的個人網站的確發表過<a href="http://www.drmirkin.com/fitness/why-ice-delays-recovery.html" target="_blank">Why Ice Delays Recovery</a>這篇文章，也在該篇文章中提出相關的研究，以及對運動傷害的新處理建議',
     '理論提出者Robert O. Young已於2018年11月被法院判決詐欺罪成立，人體本身有酸鹼平衡機制，鹼性水及鹼性飲食並無法調整人體酸鹼環境；酸性體質導致癌症之說其實是倒果為因；蚊子則是偵測溫度及二氧化碳濃度來覓食。行之有年的酸鹼體質理論，產生多種曲解酸鹼原理的謠言版本'
 ]
 const link=[
@@ -127,11 +127,11 @@ const check=(input)=>{
         document.getElementById("ans-btn").style.backgroundColor="#28a745";
         document.getElementById("msg-bar").style.color="#28a745";
         if(ans[order[nowAt]]==0){
-            document.getElementById("msg-bar").innerHTML='恭喜您答對了! 沒有錯這是一則假新聞!';
+            document.getElementById("msg-bar").innerHTML='恭喜您答對了!<br/>沒有錯這是一則假新聞!';
         }
         else{
     
-            document.getElementById("msg-bar").innerHTML='恭喜您答對了! 沒有錯這是一則真新聞!';
+            document.getElementById("msg-bar").innerHTML='恭喜您答對了!<br/>沒有錯這是一則真新聞!';
         }
     }
     else{
@@ -140,10 +140,10 @@ const check=(input)=>{
         document.getElementById("ans-btn").style.backgroundColor="#dc3545";
         document.getElementById("msg-bar").style.color="#dc3545";
         if(ans[order[nowAt]]==0){
-            document.getElementById("msg-bar").innerHTML='真可惜答錯了! 這是一則假新聞!';
+            document.getElementById("msg-bar").innerHTML='真可惜答錯了!<br/>這是一則假新聞!';
         }
         else{
-            document.getElementById("msg-bar").innerHTML='真可惜答錯了! 這是一則真新聞!';
+            document.getElementById("msg-bar").innerHTML='真可惜答錯了!<br/>這是一則真新聞!';
         }
     }
     document.getElementById("counter").innerHTML="答對 "+score+" 題";
@@ -161,6 +161,10 @@ const send=()=>{
     var department = $('#department')
     var phone = $('#phone');
     var parameter = {};
+    $("#contact").hide();
+    $('.loading').show();
+    document.getElementById("title").innerHTML="";
+    document.getElementById("question").innerHTML="";
     parameter = {
       email: email.val(),
       name: name.val(),
@@ -169,13 +173,14 @@ const send=()=>{
       phone : phone.val()
     };
     $.get('https://script.google.com/macros/s/AKfycbxNPD8xVmraw0OLc0Pi_qPBeiWKppRUxTbUjyj8hEjKn-b3O3g/exec', parameter, function(data) {
-  console.log(data);
+        console.log(data);
+        $('.loading').hide();
+        document.getElementById("title").innerHTML="";
+        document.getElementById("question").innerHTML="感謝您的填寫!";
+        $(".btn-area").show();
     });
     nowAt++;
-    document.getElementById("title").innerHTML="";
-    document.getElementById("question").innerHTML="感謝您的填寫!";
-    $("#contact").hide();
-    $(".btn-area").show();
+
 }
 
 const replay=()=>{

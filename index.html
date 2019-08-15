@@ -2,16 +2,18 @@
 <html>
     <head>
         <link href="./index.css" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="contain">
-            <div class="card" style="width: 40vw;">
+            <img src="logo.png" alt="logo" id="logo"/>
+            <div class="card">
                 <div class="card-body" id="second">
                 <h5 class="card-title" id="title">找出假新聞- 「真假新聞線上猜」</h5>
                 <div id="link-bar" style="display:none;">
-                    <div id="link-circle" ><button id="link-btn" onclick="linkTo()">點我開啟<br/>好讀原文</button></div>
+                    <div id="link-circle" ><button id="link-btn" class="btn" onclick="linkTo()">點我開啟<br/>好讀原文</button></div>
                     <div id="source-bar"></div>
                 </div>
                 <div id="ans-bar" style="display:none;">
@@ -39,10 +41,16 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">聯絡電話</label>
-                        <input type="number" class="form-control" id="phone" placeholder="聯絡電話">
+                        <input type="text" class="form-control" id="phone" placeholder="聯絡電話">
                     </div>
                     <button type="button" class="btn btn-primary"  onclick="send()">送出</button>
                 </form>
+                <div class="loading" style="display:none;">
+                    <div class="spinner-border text-info" style="margin:auto;display:block" role="status">
+                        <span class="sr-only" >傳送中，請勿關閉網頁</span>
+                    </div>
+                    <div id="loading-msg">傳送中，請稍等一下歐~</div>
+                </div>
                 <div class="btn-area">
                         <button type="button" style="display:none;" class="btn btn-success"  onclick="check(1)">真</button>
                         <div id="counter" style="display:none;"></div>
