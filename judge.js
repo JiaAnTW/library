@@ -83,6 +83,11 @@ function start(){
     $("#counter").show();
     $(".btn-danger").show();
     $("#link-bar").show();
+    if(link[order[nowAt]]===null){
+        $("#link-bar").hide();
+    }
+    else
+        $("#link-bar").show();
 }
 
 function changeNowAt(){
@@ -97,6 +102,11 @@ function changeNowAt(){
     document.getElementById("title").innerHTML=title[order[nowAt]];
     document.getElementById("question").innerHTML=question[order[nowAt]];
     document.getElementById("source-bar").innerHTML=source[order[nowAt]];
+    if(link[order[nowAt]]===null){
+        $("#link-bar").hide();
+    }
+    else
+        $("#link-bar").show();
     if(nowAt>=10 || score>=3){
         //document.getElementById("second").style.display="none";
         //document.getElementById("third").style.display="block";
